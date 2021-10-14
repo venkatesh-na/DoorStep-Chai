@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/DoorStep-Chai/static/css/main.f4c742b6.chunk.css",
+    "main.js": "/DoorStep-Chai/static/js/main.4b46ab0c.chunk.js",
+    "main.js.map": "/DoorStep-Chai/static/js/main.4b46ab0c.chunk.js.map",
+    "runtime-main.js": "/DoorStep-Chai/static/js/runtime-main.1cafeb55.js",
+    "runtime-main.js.map": "/DoorStep-Chai/static/js/runtime-main.1cafeb55.js.map",
+    "static/js/2.12e3a476.chunk.js": "/DoorStep-Chai/static/js/2.12e3a476.chunk.js",
+    "static/js/2.12e3a476.chunk.js.map": "/DoorStep-Chai/static/js/2.12e3a476.chunk.js.map",
+    "static/js/3.5e58f16c.chunk.js": "/DoorStep-Chai/static/js/3.5e58f16c.chunk.js",
+    "static/js/3.5e58f16c.chunk.js.map": "/DoorStep-Chai/static/js/3.5e58f16c.chunk.js.map",
+    "index.html": "/DoorStep-Chai/index.html",
+    "static/css/main.f4c742b6.chunk.css.map": "/DoorStep-Chai/static/css/main.f4c742b6.chunk.css.map",
+    "static/js/2.12e3a476.chunk.js.LICENSE.txt": "/DoorStep-Chai/static/js/2.12e3a476.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.1cafeb55.js",
+    "static/js/2.12e3a476.chunk.js",
+    "static/css/main.f4c742b6.chunk.css",
+    "static/js/main.4b46ab0c.chunk.js"
+  ]
+}
