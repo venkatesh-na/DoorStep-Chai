@@ -17,6 +17,7 @@ const AppProvider = ({children})=>{
     const [phoneError,setPhoneError] = useState("")
     const [addressError,setAddressError] = useState("")
     const [radioError,setRadioError] = useState("")
+    const [numberError,setNumberError] = useState("")
     const [status,setStatus] = useState(false)
 
     //message accordin to status code
@@ -38,7 +39,7 @@ const AppProvider = ({children})=>{
     const handleSubmit = async (e)=>{
         e.preventDefault()
         const {name,phone,address,radioValue,qnt,noOfPeople,price} = userData
-        if(name.length > 2 && phone.match(/^[7-9][0-9]{9}$/) !== null && address && radioValue)
+        if(name.length > 2 && phone.match(/^[7-9][0-9]{9}$/) !== null && address && radioValue && noOfPeople > 0)
         {
             try
             {
@@ -136,6 +137,14 @@ const AppProvider = ({children})=>{
             {
                 setRadioError("select any tea flavour")
             }
+            if(noOfPeople == 0)
+            {
+                setNumberError("Enter no of cups of tea")
+            }
+            if(noOfPeople < 0)
+            {
+                setNumberError("please enter positive number")
+            }
         }
     }
     return (
@@ -147,6 +156,7 @@ const AppProvider = ({children})=>{
             phoneError,
             addressError,
             radioError,
+            numberError,
             status,
             statusMessage}}>
             {children}

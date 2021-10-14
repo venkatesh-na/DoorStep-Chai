@@ -3,7 +3,7 @@ import RadioContainer from "./RadioContainer";
 import { useGlobalContext } from "./Context";
 
 const Form = ()=>{
-    const {handleChange,handleSubmit,userData,alert,nameError,phoneError,addressError,radioError,status,statusMessage} = useGlobalContext()
+    const {handleChange,handleSubmit,userData,alert,nameError,phoneError,addressError,radioError,numberError,status,statusMessage} = useGlobalContext()
     const {name,phone,address,radioValue,qnt,noOfPeople,price} = userData
     return ( 
         <section className = "form-container">
@@ -43,6 +43,7 @@ const Form = ()=>{
                 <label>
                     <span>choose cup of tea</span>
                     <input onChange = {handleChange} value = {noOfPeople} name = "noOfPeople" type = "number" min = "1" max = "10"/>
+                    {nameError && <p className = "message">{noOfPeople > 0 ? "" : numberError}</p>}
                 </label>
                 <div className = "form-footer">
                     <p className = "price">price: {price}rs</p>
