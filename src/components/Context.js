@@ -58,7 +58,7 @@ const AppProvider = ({children})=>{
                     noOfPeople,
                     price
             })})
-            if(res.status == 200)
+            if(res.status === 200)
             {
                 console.log(res)
                 setNameError("")
@@ -82,13 +82,12 @@ const AppProvider = ({children})=>{
 
                 setStatus(true)
                 setStatusMessage({code:"200",message:"Thank Yor for ordering from DoorStep Chai"})
-                let timer;
-                timer = setTimeout(()=>{
+                setTimeout(()=>{
                     setStatus(false)
                     setStatusMessage({code:"",message:""})
                 },3000)
             }
-            else if(res.status == 423)
+            else if(res.status === 423)
             {
                 //database is locked
                 window.scrollTo({
@@ -96,8 +95,7 @@ const AppProvider = ({children})=>{
                 })
                 setStatus(true)
                 setStatusMessage({code:"420",message:"DoorStep Chai is closed try again on 7 AM"})
-                  let timer;
-                timer = setTimeout(()=>{
+                 setTimeout(()=>{
                     setStatus(false)
                     setStatusMessage({code:"",message:""})
                 },3000)
@@ -112,8 +110,7 @@ const AppProvider = ({children})=>{
                 })
             setStatus(true)
             setStatusMessage({code:"",message:"please turn on your internet"})
-            let timer;
-                timer = setTimeout(()=>{
+            setTimeout(()=>{
                     setStatus(false)
                     setStatusMessage({code:"",message:""})
                 },3000)
@@ -137,7 +134,7 @@ const AppProvider = ({children})=>{
             {
                 setRadioError("select any tea flavour")
             }
-            if(noOfPeople == 0)
+            if(noOfPeople === 0)
             {
                 setNumberError("Enter no of cups of tea")
             }

@@ -1,15 +1,15 @@
-import React, { useState } from "react"
+import React from "react"
 import RadioContainer from "./RadioContainer";
 import { useGlobalContext } from "./Context";
 
 const Form = ()=>{
-    const {handleChange,handleSubmit,userData,alert,nameError,phoneError,addressError,radioError,numberError,status,statusMessage} = useGlobalContext()
+    const {handleChange,handleSubmit,userData,nameError,phoneError,addressError,radioError,numberError,status,statusMessage} = useGlobalContext()
     const {name,phone,address,radioValue,qnt,noOfPeople,price} = userData
     return ( 
         <section className = "form-container">
             <h1>DoorStep Chai</h1>
             <form>
-                {status && <p className = {statusMessage.code == "200" ? "success" : "message"}>{statusMessage.message}</p>}
+                {status && <p className = {statusMessage.code === "200" ? "success" : "message"}>{statusMessage.message}</p>}
                 <label>
                     <span>name</span>
                     <input onChange = {handleChange} value = {name} type = "text" name = "name"/>
