@@ -60,7 +60,6 @@ const AppProvider = ({children})=>{
             })})
             if(res.status === 200)
             {
-                console.log(res)
                 setNameError("")
                 setPhoneError("")
                 setAddressError("")
@@ -104,7 +103,6 @@ const AppProvider = ({children})=>{
         catch(error)
         {
             //internet error
-            console.log("loading")
             window.scrollTo({
                     top:0,
                 })
@@ -134,13 +132,13 @@ const AppProvider = ({children})=>{
             {
                 setRadioError("select any tea flavour")
             }
-            if(noOfPeople === 0)
+            if(noOfPeople === "0")
             {
                 setNumberError("Enter no of cups of tea")
             }
             if(noOfPeople < 0)
             {
-                setNumberError("please enter positive number")
+                setNumberError("please enter a positive number")
             }
         }
     }
